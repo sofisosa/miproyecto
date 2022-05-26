@@ -584,6 +584,11 @@ caption {
     color: white;
     font-size: 24px;
   }
+  .segundotitulo-index:hover{
+    background-color: white;
+    color: black;
+    border-radius: 40%;
+  }
   
   .titulo-index {
     font-size: 30px;
@@ -772,6 +777,11 @@ caption {
     right: 10px;
     font-size: 12px;
   }
+  .fijado:hover{
+    width: 120%;
+    font-size: 15px;
+    
+  }
   /*servicio desktop*/
 
   .Grid-servicio {
@@ -816,7 +826,11 @@ caption {
     width: auto;
     transition: all 1s;
   }
-
+  .titulo-servicio:hover {
+    font-size: 34px;
+    color: black;
+    background-color: white;
+  }
   .container-tipo-servicio{
     display: flex;
     flex-direction: column;
