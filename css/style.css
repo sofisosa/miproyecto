@@ -583,11 +583,14 @@ caption {
     background-color: black;
     color: white;
     font-size: 24px;
+    width: 100px;
   }
   .segundotitulo-index:hover{
     background-color: white;
     color: black;
     border-radius: 40%;
+    width: 130px;
+    font-size: 30px;
   }
   
   .titulo-index {
@@ -778,9 +781,9 @@ caption {
     font-size: 12px;
   }
   .fijado:hover{
-    width: 120%;
+    width: 120px;
     font-size: 15px;
-    
+
   }
   /*servicio desktop*/
 
