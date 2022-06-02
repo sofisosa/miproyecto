@@ -1,65 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FotografiaSofiaSosa</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <div class="Grid-index" id="Inicio-index">
-         <!--pagina de fotografia-->
-        <header class="menu-index">
-           <!--Inicio menu-->
-            <nav class="nav">
-               <a href="./index.html"><img src="./img/logonegro.png" alt="logo" class="logo-principal"></a>
-                <ul class="barra">
-    
-                    <li><a href="./pages/contacto.html">CONTACTO</a></li>
-                    <li><a href="./pages/nosotros.html">NOSOTROS</a> </li>
-                    <li><a href="./pages/media.html">MEDIA</a></li>
-                    <li><a href="./pages/servicios.html">SERVICIOS</a></li>
-    
-                </ul>
-            </nav>
-        </header>
-        <main class="contenido-index">
-         <!--Contenido del index-->
-           <div class="container-titulo">
-            <h1 class="titulo-index">Captura tus mejores momentos.</h1>
-           </div>
-    
-            <div class="container-img-index">
-    
-                   <section> <img class="img-index" src="./img/camara2.avif" alt="camara"> </section>
-                    <section> <img class="img-index" src="./img/callejera.avif" alt="callejera"> </section>
-                    <section> <img class="img-index" src="./img/discos.avif" alt="discos"></section>
-                    <section> <img class="img-index" src="./img/ruta.avif" alt="calle"></section>
-                    <section> <img class="img-index" src="./img/fotoedificio.avif" alt="edificio"></section>
-                    <section> <img class="img-index" src="./img/chicabolsa.avif" alt="chica2"></section>
-                    <section> <img class="img-index" src="./img/fototaxi.avif" alt="taxi"></section>
-                    <section class="img-puente"> <img class="img-index" src="./img/img3.avif" alt="puente"></section>
-                    <section class="img-vintage"> <img class="img-index" src="./img/vintage.avif" alt="callevintage"></section>
-                </div>
 
-            <div class="container-texto1">
-                <a href="#Inicio-index"><h2 class="segundotitulo-index">pHHotto!</h2></a>
-                <h3> Somos una empresa con mas de 10 años de experiencia. Te brindamos el mejor servicio para que puedas congelar tus mejores recuerdos. Contactanos!  </h3>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FotografiaSofiaSosa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,300&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="Grid-index" id="Inicio-index">
+    <!--pagina de fotografia-->
+    <header class="menu-index">
+
+      <!--Inicio menu-->
+      <nav class="nav">
+        <a href="./index.html"><img src="./img/logonegro.png" alt="logo" class="logo-principal"></a>
+        <ul class="barra">
+
+          <li><a href="./pages/contacto.html">CONTACTO</a></li>
+          <li><a href="./pages/nosotros.html">NOSOTROS</a> </li>
+          <li>
+            <div class="btn-group">
+              <button type="button" class="btn btn-danger boton-media"><a href="./pages/media.html">MEDIA</a></button>
+              <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split boton-desplegable"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">FOTOS</a></li>
+                <li><a class="dropdown-item" href="#">VIDEOS</a></li>
+              </ul>
             </div>
-        </main>
-        <footer class="footer-index">
-            <img src="./img/logoinstagram.png" alt="logoinstagram" class="logo">
-            <img src= "./img/logofacebook.png" alt="logofacebook" class="logo">
-            <img src="./img/logoemail.png" alt="logoemail" class="logo">
-            <p class="text-footer">Todos los derechos reservados</p>
-        </footer>
-    </div>
+          </li>
+          <li><a href="./pages/servicios.html">SERVICIOS</a></li>
+
+        </ul>
+      </nav>
+    </header>
+    <main class="contenido-index">
+      <!--Contenido del index-->
+      <div class="container-titulo">
+        <h1 class="titulo-index">Captura tus mejores momentos.</h1>
+      </div>
+
+      <div class="container-img-index">
+
+        <section> <img class="img-index" src="./img/camara2.avif" alt="camara"> </section>
+        <section> <img class="img-index" src="./img/callejera.avif" alt="callejera"> </section>
+        <section> <img class="img-index" src="./img/discos.avif" alt="discos"></section>
+        <section> <img class="img-index" src="./img/ruta.avif" alt="calle"></section>
+        <section> <img class="img-index" src="./img/fotoedificio.avif" alt="edificio"></section>
+        <section> <img class="img-index" src="./img/chicabolsa.avif" alt="chica2"></section>
+        <section> <img class="img-index" src="./img/fototaxi.avif" alt="taxi"></section>
+        <section class="img-puente"> <img class="img-index" src="./img/img3.avif" alt="puente"></section>
+        <section class="img-vintage"> <img class="img-index" src="./img/vintage.avif" alt="callevintage"></section>
+      </div>
+<!--CAROUSEL INDEX-->
+      <div class="container-carousel-index">
+        <div id="carousel-index" class="carousel slide " data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/foto-carousel-index-3.webp" class="img-carousel-index" alt="foto-auto">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/foto-carousel-index-11.jpeg" class="img-carousel-index" alt="ruta">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/foto-carousel-index-17.avif" class="img-carousel-index" alt="ruta">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/foto-carousel-index-12.jpeg" class="img-carousel-index" alt="ruta">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/foto-carousel-index-18.avif" class="img-carousel-index" alt="ruta">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/foto-carousel-index-7.jpeg" class="img-carousel-index" alt="ruta">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel-index" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel-index" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      
+      <div class="container-texto1">
+        <a href="#Inicio-index">
+          <h2 class="segundotitulo-index">pHHotto!</h2>
+        </a>
+        <h3> Somos una empresa con mas de 10 años de experiencia. Te brindamos el mejor servicio para que puedas
+          congelar tus mejores recuerdos. Contactanos! </h3>
+      </div>
+    </main>
+    <footer class="footer-index">
+      <img src="./img/logoinstagram.png" alt="logoinstagram" class="logo">
+      <img src="./img/logofacebook.png" alt="logofacebook" class="logo">
+      <img src="./img/logoemail.png" alt="logoemail" class="logo">
+      <p class="text-footer">Todos los derechos reservados</p>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
