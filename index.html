@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,300&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
@@ -23,7 +24,45 @@
     <!--pagina de fotografia-->
     <header class="menu-index">
 
-      <!--Inicio menu-->
+      <nav class="navbar navbar-expand-lg navbar-black bg-black ">
+        <div class="container-fluid ">
+          <img src="./img/logonegro.png" alt="logo"  class=" logo-principal d-inline-block align-text-top">
+          <a class="navbar-brand class-a" href="./index.html">pHHotto!</a>
+          <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll mx-auto" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link  class-a" aria-current="page" href="./index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link class-a" href="./pages/contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link class-a" href="./pages/nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle class-a" href="" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Media
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item " href="./pages/media.html">Fotos</a></li>
+                  <li><a class="dropdown-item" href="#">Videos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./pages/media.html">Ver todo</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link class-a" href="./pages/servicios.html">Servicios</a>
+              </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!--Inicio menu
+      
       <nav class="nav">
         <a href="./index.html"><img src="./img/logonegro.png" alt="logo" class="logo-principal"></a>
         <ul class="barra">
@@ -46,12 +85,12 @@
           <li><a href="./pages/servicios.html">SERVICIOS</a></li>
 
         </ul>
-      </nav>
+      </nav>-->
     </header>
     <main class="contenido-index">
       <!--Contenido del index-->
       <div class="container-titulo">
-        <h1 class="titulo-index">Captura tus mejores momentos.</h1>
+        <h1 class="titulo-index animate__animated  animate__lightSpeedInLeft">Captura tus mejores momentos.</h1>
       </div>
 
       <div class="container-img-index">
@@ -102,7 +141,7 @@
       
       <div class="container-texto1">
         <a href="#Inicio-index">
-          <h2 class="segundotitulo-index">pHHotto!</h2>
+           <h2 class="segundotitulo-index">pHHotto!</h2>
         </a>
         <h3> Somos una empresa con mas de 10 años de experiencia. Te brindamos el mejor servicio para que puedas
           congelar tus mejores recuerdos. Contactanos! </h3>

@@ -11,46 +11,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,300&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,300&display=swap"  rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <div class="Grid-servicio" id="Inicio-servicios">
         <header class="menu-servicios">
-            <nav class="nav">
-                <a href="../index.html"><img src="../img/logonegro.png" alt="logo" class="logo-principal" /></a>
-                <ul class="barra">
-
-                    <li><a href="./contacto.html">CONTACTO</a></li>
-                    <li><a href="./nosotros.html">NOSOTROS</a> </li>
-                    <li>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-danger boton-media"><a
-                                    href="./media.html">MEDIA</a></button>
-                            <button type="button"
-                                class="btn btn-danger dropdown-toggle dropdown-toggle-split boton-desplegable"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="visually-hidden">Toggle Dropdown</span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">FOTOS</a></li>
-                                <li><a class="dropdown-item" href="#">VIDEOS</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="./servicios.html">SERVICIOS</a></li>
-                </ul>
-            </nav>
+            <nav class="navbar navbar-expand-lg navbar-black bg-black ">
+                <div class="container-fluid ">
+                  <img src="../img/logonegro.png" alt="logo"  class=" logo-principal d-inline-block align-text-top">
+                  <a class="navbar-brand class-a" href="../index.html">pHHotto!</a>
+                  <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse " id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll mx-auto" style="--bs-scroll-height: 100px;">
+                      <li class="nav-item">
+                        <a class="nav-link active class-a" aria-current="page" href="../index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link class-a" href="./contacto.html">Contacto</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link class-a" href="./nosotros.html">Nosotros</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle class-a" href="" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Media
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                          <li><a class="dropdown-item" href="#">Fotos</a></li>
+                          <li><a class="dropdown-item" href="#">Videos</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="media.html">Ver todo</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link class-a" href="./servicios.html">Servicios</a>
+                      </li>
+                      </ul>
+                  </div>
+                </div>
+              </nav>
         </header>
 
         <main class="contenido-servicios">
                   <!--Inicio tipos de servicios-->
             <div class="container-tipo-servicio">
-                <h2 class="titulo-servicio" data-bs-toggle="modal" data-bs-target="#modal-moda">MODA</h2>
+                <h2 class="titulo-servicio animate__animated animate__tada" data-bs-toggle="modal" data-bs-target="#modal-moda">MODA</h2>
                 <div class="container-servicio">
                     <p class="texto-servicio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, modi. Ut
                         itaque quidem, quam cumque perferendis aperiam corporis omnis consequatur, laborum eveniet
@@ -65,7 +76,7 @@
                 </div>
             </div>
             <div class="container-tipo-servicio">
-                <h2 class="titulo-servicio" data-bs-toggle="modal" data-bs-target="#modal-bodas">BODAS</h2>
+                <h2 class="titulo-servicio animate__animated animate__tada" data-bs-toggle="modal" data-bs-target="#modal-bodas">BODAS</h2>
                 <div class="container-servicio">
 
                     <p class="texto-servicio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, modi. Ut
@@ -82,7 +93,7 @@
 
             </div>
             <div class="container-tipo-servicio">
-                <h2 class="titulo-servicio" data-bs-toggle="modal" data-bs-target="#modal-naturaleza">NATURALEZA</h2>
+                <h2 class="titulo-servicio animate__animated animate__tada" data-bs-toggle="modal" data-bs-target="#modal-naturaleza">NATURALEZA</h2>
                 <div class="container-servicio">
 
                     <p class="texto-servicio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, modi. Ut
@@ -100,7 +111,7 @@
 
             </div>
             <div class="container-tipo-servicio">
-                <h2 class="titulo-servicio" data-bs-toggle="modal" data-bs-target="#modal-animales">ANIMALES</h2>
+                <h2 class="titulo-servicio animate__animated animate__tada" data-bs-toggle="modal" data-bs-target="#modal-animales">ANIMALES</h2>
                 <div class="container-servicio">
                     <p class="texto-servicio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, modi. Ut
                         itaque quidem, quam cumque perferendis aperiam corporis omnis consequatur, laborum eveniet
@@ -116,7 +127,7 @@
             </div>
 
             <div class="container-tipo-servicio">
-                <h2 class="titulo-servicio" data-bs-toggle="modal" data-bs-target="#modal-arquitectura">ARQUITECTURA
+                <h2 class="titulo-servicio animate__animated animate__tada" data-bs-toggle="modal" data-bs-target="#modal-arquitectura">ARQUITECTURA
                 </h2>
                 <div class="container-servicio">
                     <p class="texto-servicio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, modi. Ut
@@ -133,7 +144,7 @@
                 </div>
             </div>
             <div class="container-tipo-servicio">
-                <h2 class="titulo-servicio" data-bs-toggle="modal" data-bs-target="#modal-deportes">DEPORTES</h2>
+                <h2 class="titulo-servicio animate__animated animate__tada" data-bs-toggle="modal" data-bs-target="#modal-deportes">DEPORTES</h2>
                 <div class="container-servicio">
                     <p class="texto-servicio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, modi. Ut
                         itaque quidem, quam cumque perferendis aperiam corporis omnis consequatur, laborum eveniet
@@ -148,7 +159,7 @@
                 </div>
             </div>
             <div class="container-tipo-servicio">
-                <h2 class="titulo-servicio" data-bs-toggle="modal" data-bs-target="#modal-fotografiaCallejera">
+                <h2 class="titulo-servicio animate__animated animate__tada" data-bs-toggle="modal" data-bs-target="#modal-fotografiaCallejera">
                     FOTOGRAFIA CALLEJERA</h2>
                 <div class="container-servicio">
 
