@@ -10,7 +10,7 @@ body {
 .Grid-index {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 7% auto 5%;
+  grid-template-rows: 5% auto 5%;
   grid-template-areas:
     " menu menu"
     " contenido contenido"
@@ -49,13 +49,16 @@ ul {
   color: white }
 
 */
+a{color: white;
+  text-decoration: none;
+}
 
 .class-a{
   font-size: 20px;
   color: rgb(255, 255, 255) ;
 }
 .class-a:hover{
-color:white
+color:white;
 }
 .logo-principal {
   width: 90px;
@@ -108,7 +111,7 @@ color:white
   border-radius: 10px;
   object-fit: cover;
 }
-.carousel-inner{
+.carouselIner-index{
   width: 350px;
   border-radius: 40px;
  }
@@ -154,7 +157,7 @@ footer {
 .Grid-contacto {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 12% auto 5%;
+  grid-template-rows: 15% auto 4%;
   grid-template-areas:
     " menu menu"
     " contenido contenido"
@@ -179,7 +182,7 @@ footer {
   text-align: center;
   margin: 8px;
   padding: 6px;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 form {
@@ -189,44 +192,17 @@ form {
   justify-content: space-between;
 }
 input {
-  width: 250px;
-  height: 20px;
+  width: 300px;
+  height: 30px;
   margin: 12px;
-}
-.titulo-table {
   text-align: center;
-  margin: 8px;
-  padding: 6px;
-  font-size: 20px;
 }
-.container-table {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 8px;
-  margin: 8px;
+.boton-contacto{
+  margin-top: 15px;
+  width: 150px;
+  padding: 5px;
 }
-table {
-  text-align: center;
-  width: 350px;
-  height: 150px;
-  border: solid 3px rgb(66, 30, 30);
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-td,
-th {
-  border: solid 3px rgb(66, 30, 30);
-}
-th {
-  padding: 6px;
-}
-caption {
-  text-align: center;
-  font-size: 15px;
-  margin-bottom: 10px;
-}
+
 /* ---------- CSS  NOSOTROS--------*/
 .Grid-nosotros {
   display: grid;
@@ -307,6 +283,16 @@ caption {
   gap: 5px;
   margin: 15px;
 }
+.boton-volver{
+  border-radius: 50%;
+width: 70px;
+background-color: black;
+font-size: 10px;
+position: fixed;
+  bottom: 10px;
+  right: 10px;
+font-weight: bold;
+color: white;}
 /* ---------- CSS SERVICIOS--------*/
 .Grid-servicio {
   display: grid;
@@ -327,41 +313,46 @@ caption {
 .footer-servicios {
   grid-area: footer;
 }
-
-.container-servicio {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.img-servicio {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 30px;
+.contenido-servicios {
+  margin: 15px;
 }
 .titulo-servicio {
   text-align: center;
   text-decoration: underline;
   font-size: 20px;
+  margin-top: 10px;
 }
-
 .texto-servicio {
   text-align: center;
-  width: 250px;
   font-size: 12px;
 }
-.contenido-servicios {
+.texto-servicio-2{
+  text-align: center;
+  font-size: 12px;
+ margin-bottom: 10px;
+}
+.click{
+font-weight: bold;
+text-decoration: underline;
+}
+
+.container-tipo-servicio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 15px;
+  padding: 10px;
 }
-.modal-title{
-  color: black;
-  font-size: 25px;
-  font-weight: bold;
+.carouselIner-servicios{
+  width: 350px;
+height: 200px;
 }
-.img-carousel-servicio{
-  width: 480px;
-  height: 580px;
-  object-fit: cover;
+.img-servicio{
+ width: 350px;
+ height: 200px;
+ object-fit: cover;
+ border-radius: 30px;
 }
 
 
@@ -371,7 +362,7 @@ caption {
   .Grid-index {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 10% auto 3%;
+    grid-template-rows: 7% auto 3%;
     grid-template-areas:
       " menu menu menu"
       " contenido contenido contenido"
@@ -418,7 +409,7 @@ caption {
   .img-puente {
     grid-area: 3/3/4/4;
   }
-  .carousel-inner{
+  .carouselIner-index{
     width: 500px;
    }
   .img-carousel-index{
@@ -455,14 +446,11 @@ caption {
     font-size: 20px;
   }
   input {
-    width: 300px;
-    height: 25px;
+    width: 400px;
+    height: 35px;
     margin: 12px;
   }
-  table {
-    width: 550px;
-    height: 150px;
-  }
+  
   /* nosotros TABLET*/
 
   .Grid-nosotros {
@@ -533,7 +521,7 @@ caption {
   .Grid-servicio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 7% auto 7%;
+    grid-template-rows: 5% auto 7%;
     gap: 10px;
     grid-template-areas:
       " menu menu menu"
@@ -549,18 +537,23 @@ caption {
   .footer-servicios {
     grid-area: footer;
   }
-  .container-servicio {
-    display: flex;
-    justify-content: space-around;
+
+  .carouselIner-servicios{
+    width: 500px;
+  height: 300px;
   }
-  .img-servicio {
-    width: 200px;
-    height: 200px;
-  }
+ .img-servicio{
+   width: 500px;
+   height: 300px;
+ }
   .texto-servicio {
     text-align: center;
-    width: 400px;
     font-size: 14px;
+  }
+  .texto-servicio-2{
+    text-align: center;
+    font-size: 14px;
+   margin-bottom: 15px;
   }
   .titulo-servicio {
     font-size: 24px;
@@ -637,7 +630,7 @@ caption {
     grid-template-rows: repeat(2, 250px);
     gap: 10px;
   }
-  .carousel-inner{
+  .carouselIner-index{
    width: 700px;
   }
   .img-carousel-index{
@@ -706,25 +699,30 @@ caption {
   .footer-contacto {
     grid-area: footer;
   }
+  
+  .container-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .titulo-form {
     font-size: 30px;
+    padding: 12px;
+    margin-bottom: 20px;
   }
   input {
-    width: 350px;
-    height: 30px;
-    margin: 12px;
+    width: 500px;
+    height: 50px;
+    margin: 16px;
+    text-align: center;
   }
-  .titulo-table {
-    font-size: 24px;
+  .boton-contacto{
+    margin-top: 15px;
+    width: 200px;
+    padding: 10px;
   }
-  .container-table {
-    padding: 15px;
-    margin: 15px;
-  }
-  table {
-    width: 800px;
-    height: 150px;
-  }
+ 
 
   /* nosotros desktop*/
   .Grid-nosotros {
@@ -865,12 +863,12 @@ color: white;}
   .Grid-servicio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 7% auto 7%;
+    grid-template-rows: 3% auto 7%;
     gap: 10px;
     grid-template-areas:
       " menu menu menu"
       " contenido contenido contenido"
-      "footer footer footer";
+      "footer footer footer" ;
   }
   .menu-servicios {
     grid-area: menu;
@@ -881,52 +879,37 @@ color: white;}
   .footer-servicios {
     grid-area: footer;
   }
-  .container-servicio {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-  }
-  .img-servicio {
-    width: 300px;
-    height: 300px;
-  }
-  .texto-servicio {
-    text-align: center;
-    width: 800px;
-    font-size: 18px;
-    margin-left: 30px;
-  }
-
   .titulo-servicio {
     font-size: 28px;
     margin: 10px;
     padding: 10px;
     background-color: black;
     width: auto;
-    transition: all 1s;
+    transition: all 1s linear;
     
   }
   .titulo-servicio:hover {
-    font-size: 34px;
-    color: black;
-    background-color: rgb(248, 234, 234);
-    border-radius: 30px;
+    font-size: 40px;
   }
-  .modal-title{
-    margin: 8px;}
-
-  .container-tipo-servicio{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-  }.img-carousel-servicio{
-    width: 480px;
-    height: 560px;
-    object-fit: cover;
-    border-radius: 40px;
+  .texto-servicio {
+    text-align: center;
+    width: 900px;
+    font-size: 18px;
+  }
+  .texto-servicio-2{
+    text-align: center;
+    width: 900px;
+    font-size: 18px;
+   margin-bottom: 15px;
   }
 
+  .carouselIner-servicios{
+    width: 800px;
+  height: 400px;
+  margin-bottom: 10px;
+  }
+ .img-servicio{
+   width: 800px;
+   height: 400px;
+ }
 }
