@@ -1,0 +1,58 @@
+ /* ---------- CSS SERVICIOS--------*/
+ .Grid-servicio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 5% auto 4%;
+    gap: 10px;
+    grid-template-areas:
+      " menu menu "
+      " contenido contenido "
+      "footer footer ";
+  }
+  .menu-servicios {
+    grid-area: menu;
+  }
+  .contenido-servicios {
+    grid-area: contenido;
+    margin: 15px;
+    .container-tipo-servicio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 15px;
+        padding: 10px;
+        .titulo-servicio {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 20px;
+            margin-top: 10px;
+          }
+          .texto-servicio {
+            text-align: center;
+            font-size: 12px;
+              }
+              .texto-servicio-2 {
+                text-align: center;
+                font-size: 12px;
+                margin-bottom: 10px;
+                .click {
+                    font-weight: bold;
+                    text-decoration: underline;
+                  }
+          }
+          .carouselIner-servicios {
+            width: 350px;
+            height: 200px;
+            .img-servicio {
+                width: 350px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 30px;
+              }
+          }
+      }
+  }
+  .footer-servicios {
+    grid-area: footer;
+  }
