@@ -1,8 +1,9 @@
 @import 'contacto';
 @import'nosotros';
 @import 'media';
-@import 'servicios';
 @import'variables';
+@import 'servicios';
+
 
 /* CSS GENERAL*/
 * {
@@ -35,6 +36,11 @@ a {
     &:hover {
         color: white;
     }
+}
+
+.navbar-collapse {
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
@@ -70,98 +76,80 @@ footer {
 }
 
 /* ---------- CSS INDEX ---------*/
-.Grid-index {
+.container-titulo-index {
+    padding: 8px;
+    margin-top: 15px;
+    margin-left:
+        10px;
+
+    .titulo-index {
+        font-size: 20px;
+        text-align: center;
+    }
+
+}
+
+.container-img-index {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 10px;
+    padding: 15px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 5% auto 4%;
-    grid-template-areas:
-        " menu menu"
-        " contenido contenido"
-        " footer footer";
-    gap: 20px;
-}
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
 
-.menu-index {
-    grid-area: menu;
-}
-
-.contenido-index {
-    grid-area: contenido;
-
-    .container-titulo {
-        margin-left: 20px;
-        padding: 8px;
-        margin-top: 15px;
-
-        .titulo-index {
-            font-size: 20px;
-            text-align: center;
-        }
+    .img-index {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
     }
 
-    .container-img-index {
-        max-width: 100%;
-        max-height: 100%;
-        margin: 10px;
-        padding: 15px;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: repeat(5, 1fr);
-        gap: 10px;
+    .img-puente {
+        grid-row: 4/6;
+    }
+}
 
-        .img-index {
+.container-carousel-index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 15px;
+
+    .carouselIner-index {
+        width: 350px;
+        border-radius: 40px;
+
+        .img-carousel-index {
             width: 100%;
-            height: 100%;
-            border-radius: 10px;
+            height: 200px;
             object-fit: cover;
-        }
-
-        .img-puente {
-            grid-row: 4/6;
-        }
-    }
-
-    .container-carousel-index {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px;
-        padding: 15px;
-
-        .carouselIner-index {
-            width: 350px;
-            border-radius: 40px;
-
-            .img-carousel-index {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-                border-radius: 30px;
-            }
-        }
-    }
-
-    .container-texto1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        h3 {
-            width: 100%;
-            text-align: center;
-            font-size: 10px;
+            border-radius: 30px;
         }
     }
 }
 
-.footer-index {
-    grid-area: footer;
+.container-texto1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        text-align: center;
+        font-size: 10px;
+        margin: 10px;
+        padding: 10px;
+    }
 }
+
+
 
 /*MEDIA  QUERIES TABLET*/
 
-@media screen and (min-width:#{$tablet}) {
+@media screen and (min-width: 600px) {
 
     /*MEDIA  QUERIES GENERAL*/
     .logo-principal {
@@ -174,254 +162,142 @@ footer {
     }
 
     /*MEDIA  QUERIES INDEX*/
-    .Grid-index {
+    .container-titulo-index {
+        .titulo-index {
+            font-size: 25px;
+        }
+    }
+
+    .container-img-index {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 7% auto 3%;
-        grid-template-areas:
-            " menu menu menu"
-            " contenido contenido contenido"
-            " footer footer footer";
-        gap: 20px;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 5px;
+
+        .img-puente {
+            grid-area: 3/3/4/4;
+        }
     }
 
-    .menu-index {
-        grid-area: menu;
-    }
+    .container-carousel-index {
+        .carouselIner-index {
+            width: 500px;
 
-    .contenido-index {
-        grid-area: contenido;
-
-        .container-titulo {
-            .titulo-index {
-                font-size: 25px;
-                text-align: center;
-                margin: 10px;
-                padding: 10px;
-            }
-        }
-
-        .container-img-index {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            gap: 5px;
-
-            .img-puente {
-                grid-area: 3/3/4/4;
-            }
-        }
-
-        .container-carousel-index {
-            .carouselIner-index {
-                width: 500px;
-
-                .img-carousel-index {
-                    width: 100%;
-                    height: 200px;
-                    object-fit: cover;
-                    border-radius: 30px;
-                }
-            }
-        }
-
-        .container-texto1 {
-            h3 {
-                font-size: 15px;
+            .img-carousel-index {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 30px;
             }
         }
     }
 
-    .footer-index {
-        grid-area: footer;
-    }
-
-    /* contacto TABLET*/
-
-    .Grid-contacto {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 17% auto 8%;
-        grid-template-areas:
-            " menu menu menu"
-            " contenido contenido contenido"
-            " footer footer footer";
-        gap: 20px;
-    }
-
-    .menu-contacto {
-        grid-area: menu;
-    }
-
-    .contenido-contacto {
-        grid-area: contenido;
-
-        .container-form {
-            .titulo-form {
-                font-size: 20px;
-            }
-
-            form {
-                input {
-                    width: 400px;
-                    height: 35px;
-                    margin: 12px;
-                }
-
-            }
+    .container-texto1 {
+        h3 {
+            font-size: 15px;
         }
     }
 
-    .footer-contacto {
-        grid-area: footer;
+
+
+/* contacto TABLET*/
+
+.container-form {
+    .titulo-form {
+        font-size: 22px;
     }
 
-    /* nosotros TABLET*/
-
-    .Grid-nosotros {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 15% auto 10%;
-        grid-template-areas:
-            " menu menu menu"
-            "contenido contenido contenido"
-            " footer footer footer";
-        gap: 10px;
-    }
-
-    .menu-nosotros {
-        grid-area: menu;
-    }
-
-    .contenido-nosotros {
-        grid-area: contenido;
-
-        .container-nosotros {
-            .titulo-nosotros {
-                font-size: 25px;
-            }
-
-            .video-nosotros {
-                width: 450px;
-                height: 300px;
-            }
-        }
-    }
-
-    .footer-nosotros {
-        grid-area: footer;
-    }
-
-    /*MEDIA TABLET*/
-    .Grid-media {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 5% auto 4%;
-        grid-template-areas:
-            " menu menu menu"
-            "contenido contenido contenido"
-            " footer footer footer";
-        gap: 10px;
-    }
-
-    .menu-media {
-        grid-area: menu;
-    }
-
-    .contenido-media {
-        grid-area: contenido;
-
-        .titulo-media {
-            font-size: 20px;
+    form {
+        input {
+            width: 400px;
+            height: 35px;
+            margin: 12px;
         }
 
-        .container-media {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(12, 250px);
-            gap: 10px;
-            margin: 20px;
+    }
+}
 
-            .img-camara {
-                grid-area: 9/2/10/4;
-            }
 
-            .img-mujer {
-                grid-column: 3/5;
-            }
+/* NOSOTROS TABLET*/
 
-            .img-pareja {
-                grid-area: 12/2/13/4;
-            }
+
+.container-nosotros {
+    .titulo-nosotros {
+        font-size: 25px;
+    }
+
+    .video-nosotros {
+        width: 450px;
+        height: 300px;
+    }
+}
+
+
+/*MEDIA TABLET*/
+
+
+.titulo-media {
+    font-size: 24px;
+}
+
+.container-media {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 250px);
+    gap: 10px;
+    margin: 20px;
+
+    .img-camara {
+        grid-area: 9/2/10/4;
+    }
+
+    .img-mujer {
+        grid-column: 3/5;
+    }
+
+    .img-pareja {
+        grid-area: 12/2/13/4;
+    }
+}
+
+/*servicios TABLET*/
+
+.contenido-servicios {
+    .container-tipo-servicio {
+        .titulo-servicio {
+            font-size: 24px;
         }
 
+        .texto-servicio {
+            text-align: center;
+            font-size: 14px;
+        }
 
-    }
+        .texto-servicio-2 {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
 
-    .footer-media {
-        grid-area: footer;
-    }
+        .carouselIner-servicios {
+            width: 500px;
+            height: 300px;
 
-
-    /*servicios TABLET*/
-    .Grid-servicio {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 4% auto 7%;
-        gap: 10px;
-        grid-template-areas:
-            " menu menu menu"
-            " contenido contenido contenido"
-            "footer footer footer";
-    }
-
-    .menu-servicios {
-        grid-area: menu;
-    }
-
-    .contenido-servicios {
-        grid-area: contenido;
-
-        .container-tipo-servicio {
-            .titulo-servicio {
-                font-size: 24px;
-            }
-
-            .texto-servicio {
-                text-align: center;
-                font-size: 14px;
-            }
-
-            .texto-servicio-2 {
-                text-align: center;
-                font-size: 14px;
-                margin-bottom: 15px;
-            }
-
-            .carouselIner-servicios {
+            .img-servicio {
                 width: 500px;
                 height: 300px;
-
-                .img-servicio {
-                    width: 500px;
-                    height: 300px;
-                }
             }
         }
     }
-
-    .footer-servicios {
-        grid-area: footer;
-    }
+}
 
 }
 
+
 /*MEDIA QUERIES DESKTOP*/
-@media screen and (min-width:#{$desktop}) {
+@media screen and (min-width: 1024px)  {
 
     /*MEDIA  QUERIES GENERAL*/
-
-
 
     .logo-principal {
         width: 100px;
@@ -464,319 +340,218 @@ footer {
     }
 
     /* INDEX DESKTOP*/
-    .Grid-index {
+    .container-titulo-index {
+        .titulo-index {
+            font-size: 30px;
+            text-align: left;
+        }
+    }
+
+    .container-img-index {
+        max-width: 100%;
+        margin: 15px;
+        padding: 15px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 10% auto 10%;
-        grid-template-areas:
-            " menu menu menu"
-            " contenido contenido contenido "
-            " footer footer footer";
-        gap: 20px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 250px);
+        gap: 10px;
+
+        .img-vintage {
+            grid-area: 1/5/3/6;
+        }
+
+        .img-puente {
+            grid-area: 2/4/3/5;
+        }
     }
 
-    .menu-index {
-        grid-area: menu;
+    .container-carousel-index {
+        .carouselIner-index {
+            width: 700px;
+
+            .img-carousel-index {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 30px;
+            }
+
+        }
+
     }
 
-    .contenido-index {
-        grid-area: contenido;
+    .container-texto1 {
+        .segundotitulo-index {
+            color: white;
+            font-size: 24px;
 
-        .container-titulo {
-            .titulo-index {
+            &:hover {
+                background-color: white;
+                color: black;
+                border-radius: 40%;
+                width: 130px;
                 font-size: 30px;
-                text-align: left;
-                margin: 10px;
-                padding: 10px;
             }
         }
 
-        .container-img-index {
-            max-width: 100%;
-            margin: 15px;
-            padding: 15px;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(2, 250px);
-            gap: 10px;
-
-            .img-vintage {
-                grid-area: 1/5/3/6;
-            }
-
-            .img-puente {
-                grid-area: 2/4/3/5;
-            }
-
+        h3 {
+            font-size: 20px;
         }
 
-        .container-carousel-index {
-            .carouselIner-index {
-                width: 700px;
-
-                .img-carousel-index {
-                    width: 100%;
-                    height: 300px;
-                    object-fit: cover;
-                    border-radius: 30px;
-                }
-
-            }
-
-        }
-
-        .container-texto1 {
-            .segundotitulo-index {
-                color: white;
-                font-size: 24px;
-
-                &:hover {
-                    background-color: white;
-                    color: black;
-                    border-radius: 40%;
-                    width: 130px;
-                    font-size: 30px;
-                }
-            }
-
-            h3 {
-                font-size: 20px;
-            }
-
-        }
     }
 
-    .footer-index {
-        grid-area: footer;
-    }
+
+
 
     /* CONTACTO DESKTOP*/
 
-    .Grid-contacto {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 15% auto 10%;
-        grid-template-areas:
-            " menu menu menu"
-            " contenido contenido contenido"
-            " footer footer footer";
-        gap: 20px;
-    }
+    .container-form {
+        .titulo-form {
+            font-size: 30px;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
 
-    .menu-contacto {
-        grid-area: menu;
-    }
-
-    .contenido-contacto {
-        grid-area: contenido;
-
-        .container-form {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            .titulo-form {
-                font-size: 30px;
-                padding: 12px;
-                margin-bottom: 20px;
+        form {
+            input {
+                width: 500px;
+                height: 50px;
+                margin: 16px;
+                text-align: center;
             }
 
-            form {
-                input {
-                    width: 500px;
-                    height: 50px;
-                    margin: 16px;
-                    text-align: center;
-                }
-
-                .boton-contacto {
-                    margin-top: 15px;
-                    width: 200px;
-                    padding: 10px;
-                }
+            .boton-contacto {
+                margin-top: 15px;
+                width: 200px;
+                padding: 10px;
             }
         }
     }
 
-    .footer-contacto {
-        grid-area: footer;
-    }
 
     /* NOSOTROS DESKTOP*/
-    .Grid-nosotros {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 15% auto 10%;
-        grid-template-areas:
-            " menu menu menu"
-            "contenido contenido contenido"
-            " footer footer footer";
-        gap: 10px;
-    }
 
-    .menu-nosotros {
-        grid-area: menu;
-    }
 
-    .contenido-nosotros {
-        grid-area: contenido;
+    .container-nosotros {
 
-        .container-nosotros {
-            .titulo-nosotros {
-                font-size: 30px;
-            }
-
-            .texto-nosotros {
-                font-size: 20px;
-            }
-
-            .video-nosotros {
-                width: 600px;
-                height: 400px;
-                margin-top: 15px;
-            }
-
+        .titulo-nosotros {
+            font-size: 30px;
         }
+
+
+        .texto-nosotros {
+            font-size: 20px;
+        }
+
+        .video-nosotros {
+            width: 600px;
+            height: 400px;
+            margin-top: 15px;
+        }
+
     }
 
-    .footer-nosotros {
-        grid-area: footer;
-    }
+
+
 
 
     /*MEDIA DESKTOP*/
-    .Grid-media {
+
+
+
+    .titulo-media {
+        font-size: 28px;
+    }
+
+    .container-media {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 5% auto 5%;
-        grid-template-areas:
-            " menu menu menu"
-            "contenido contenido contenido"
-            " footer footer footer";
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(12, 250px);
         gap: 10px;
-    }
+        margin: 45px;
 
-    .menu-media {
-        grid-area: menu;
-    }
-
-    .contenido-media {
-        grid-area: contenido;
-
-        .titulo-media {
-            font-size: 25px;
+        .img-nieve {
+            grid-row: 11/13;
         }
 
-        .container-media {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(12, 250px);
-            gap: 10px;
-            margin: 45px;
+        .img-ciudad {
+            grid-row: 11/13;
+        }
 
-            .img-nieve {
-                grid-row: 11/13;
-            }
+        .bici {
+            grid-column: 1/3;
+        }
 
-            .img-ciudad {
-                grid-row: 11/13;
-            }
+        .chica {
+            grid-area: 1/5/3/6;
+        }
 
-            .bici {
-                grid-column: 1/3;
-            }
+        .bailarina {
+            grid-area: 3/2/5/3;
+        }
 
-            .chica {
-                grid-area: 1/5/3/6;
-            }
+        .nieve {
+            grid-area: 2/4/4/5;
+        }
 
-            .bailarina {
-                grid-area: 3/2/5/3;
-            }
+        .fotomodelo {
+            grid-row: 5/7;
+        }
 
-            .nieve {
-                grid-area: 2/4/4/5;
-            }
+        .modelo3 {
+            grid-row: 8/10;
+        }
 
-            .fotomodelo {
-                grid-row: 5/7;
-            }
+        .modelo5 {
+            grid-column: 4/6;
+        }
 
-            .modelo3 {
-                grid-row: 8/10;
-            }
+        .modelo6 {
+            grid-row: 10/11;
+        }
 
-            .modelo5 {
-                grid-column: 4/6;
-            }
+        .fotozapatillas {
+            grid-area: 6/5/8/6;
+        }
 
-            .modelo6 {
-                grid-row: 10/11;
-            }
+        .fotosillon {
+            grid-column: 3/5;
+        }
 
-            .fotozapatillas {
-                grid-area: 6/5/8/6;
-            }
+        .gastronomia {
+            grid-area: 6/4/8/5;
+        }
 
-            .fotosillon {
-                grid-column: 3/5;
-            }
+        .skate {
+            grid-area: 7/3/9/4;
+        }
 
-            .gastronomia {
-                grid-area: 6/4/8/5;
-            }
+        .camino {
+            grid-area: 9/2/11/3;
+        }
 
-            .skate {
-                grid-area: 7/3/9/4;
-            }
+        .construccion {
+            grid-area: 4/5/6/6;
+        }
 
-            .camino {
-                grid-area: 9/2/11/3;
-            }
+        .img-camara {
+            grid-area: auto;
+        }
 
-            .construccion {
-                grid-area: 4/5/6/6;
-            }
+        .img-mujer {
+            grid-column: auto;
+        }
 
-            .img-camara {
-                grid-area: auto;
-            }
-
-            .img-mujer {
-                grid-column: auto;
-            }
-
-            .img-pareja {
-                grid-area: auto;
-            }
+        .img-pareja {
+            grid-area: auto;
         }
     }
 
-    .footer-media {
-        grid-area: footer;
-    }
+
 
     /*SERVICIOS DESKTOP*/
 
-    .Grid-servicio {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 3% auto 7%;
-        gap: 10px;
-        grid-template-areas:
-            " menu menu menu"
-            " contenido contenido contenido"
-            "footer footer footer";
-    }
-
-    .menu-servicios {
-        grid-area: menu;
-    }
-
     .contenido-servicios {
-        grid-area: contenido;
-
         .container-tipo-servicio {
             .titulo-servicio {
                 font-size: 28px;
@@ -818,9 +593,4 @@ footer {
 
         }
     }
-
-    .footer-servicios {
-        grid-area: footer;
-    }
-
 }

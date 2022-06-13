@@ -1,19 +1,6 @@
  /* ---------- CSS SERVICIOS--------*/
- .Grid-servicio {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 5% auto 4%;
-    gap: 10px;
-    grid-template-areas:
-      " menu menu "
-      " contenido contenido "
-      "footer footer ";
-  }
-  .menu-servicios {
-    grid-area: menu;
-  }
+
   .contenido-servicios {
-    grid-area: contenido;
     margin: 15px;
     .container-tipo-servicio {
         display: flex;
@@ -52,7 +39,4 @@
               }
           }
       }
-  }
-  .footer-servicios {
-    grid-area: footer;
-  }
+    }

@@ -1,45 +1,33 @@
  /* ---------- CSS  NOSOTROS--------*/
- .Grid-nosotros {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 10% auto 7%;
-    grid-template-areas:
-      " menu menu "
-      "contenido contenido "
-      " footer footer ";
-    gap: 10px;
-  }
-  .menu-nosotros {
-    grid-area: menu;
-  }
-  .contenido-nosotros {
-    grid-area: contenido;
-    .container-nosotros {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        margin: 10px;
-        .titulo-nosotros {
-            font-size: 20px;
-            text-decoration: underline;
-            text-align: center;
-            padding: 10px;
-          }
-          .texto-nosotros {
-            margin-top: 15px;
-            margin-bottom: 15px;
-            padding: 10px;
-            text-align: center;
-            font-size: 16px;
-          }
-          .video-nosotros {
-            width: 350px;
-            height: 200px;
-          }
-      }
-  }
-  .footer-nosotros {
-    grid-area: footer;
-  }
+
+
+ .container-nosotros {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 10px;
+   margin: 10px;
+
+
+   .titulo-nosotros {
+     font-size: 20px;
+     text-decoration: underline;
+     text-align: center;
+     padding: 10px;
+   }
+
+
+   .texto-nosotros {
+     margin-top: 15px;
+     margin-bottom: 15px;
+     padding: 10px;
+     text-align: center;
+     font-size: 16px;
+   }
+
+   .video-nosotros {
+     width: 350px;
+     height: 200px;
+   }
+ }

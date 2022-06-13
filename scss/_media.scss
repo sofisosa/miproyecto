@@ -1,26 +1,9 @@
 /* ---------- CSS MEDIA--------*/
-.Grid-media {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 4% auto 4%;
-  grid-template-areas:
-    " menu menu "
-    "contenido contenido "
-    " footer footer ";
-  gap: 10px;
-}
-
-.menu-media {
-  grid-area: menu;
-}
-
-.contenido-media {
-  grid-area: contenido;
 
   .titulo-media {
-    font-size: 17px;
-    margin-bottom: 15px;
-    margin-left: 15px;
+    font-size: 20px;
+    margin:  15px;
+   padding: 10px;
 
   }
 
@@ -40,8 +23,3 @@
     }
   }
 
-}
-
-.footer-media {
-  grid-area: footer;
-}

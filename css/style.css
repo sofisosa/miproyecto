@@ -1,126 +1,71 @@
-/* ---------- CSS CONTACTO--------*/
-.Grid-contacto {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 15% auto 7%;
-  grid-template-areas: " menu menu" " contenido contenido" " footer footer";
-  gap: 20px; }
-
-.menu-contacto {
-  grid-area: menu; }
-
-.contenido-contacto {
-  grid-area: contenido; }
-  .contenido-contacto .container-form {
-    margin: 15px;
-    padding: 10px; }
-    .contenido-contacto .container-form .titulo-form {
-      text-align: center;
-      margin: 8px;
-      padding: 6px;
-      font-size: 17px; }
-    .contenido-contacto .container-form form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between; }
-      .contenido-contacto .container-form form input {
-        width: 300px;
-        height: 30px;
-        margin: 12px;
-        text-align: center; }
-      .contenido-contacto .container-form form .boton-contacto {
-        margin-top: 15px;
-        width: 150px;
-        padding: 5px; }
-
-.footer-contacto {
-  grid-area: footer; }
-
-/* ---------- CSS  NOSOTROS--------*/
-.Grid-nosotros {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 10% auto 7%;
-  grid-template-areas: " menu menu " "contenido contenido " " footer footer ";
-  gap: 10px; }
-
-.menu-nosotros {
-  grid-area: menu; }
-
-.contenido-nosotros {
-  grid-area: contenido; }
-  .contenido-nosotros .container-nosotros {
+/*CSS CONTACTO*/
+.container-form {
+  margin: 15px;
+  padding: 10px; }
+  .container-form .titulo-form {
+    text-align: center;
+    margin: 8px;
+    padding: 6px;
+    font-size: 20px; }
+  .container-form form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin: 10px; }
-    .contenido-nosotros .container-nosotros .titulo-nosotros {
-      font-size: 20px;
-      text-decoration: underline;
-      text-align: center;
-      padding: 10px; }
-    .contenido-nosotros .container-nosotros .texto-nosotros {
+    justify-content: space-between; }
+    .container-form form input {
+      width: 300px;
+      height: 30px;
+      margin: 12px;
+      text-align: center; }
+    .container-form form .boton-contacto {
       margin-top: 15px;
-      margin-bottom: 15px;
-      padding: 10px;
-      text-align: center;
-      font-size: 16px; }
-    .contenido-nosotros .container-nosotros .video-nosotros {
-      width: 350px;
-      height: 200px; }
+      width: 150px;
+      padding: 5px; }
 
-.footer-nosotros {
-  grid-area: footer; }
+/* ---------- CSS  NOSOTROS--------*/
+.container-nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px; }
+  .container-nosotros .titulo-nosotros {
+    font-size: 20px;
+    text-decoration: underline;
+    text-align: center;
+    padding: 10px; }
+  .container-nosotros .texto-nosotros {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px; }
+  .container-nosotros .video-nosotros {
+    width: 350px;
+    height: 200px; }
 
 /* ---------- CSS MEDIA--------*/
-.Grid-media {
+.titulo-media {
+  font-size: 20px;
+  margin: 15px;
+  padding: 10px; }
+
+.container-media {
+  max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 4% auto 4%;
-  grid-template-areas: " menu menu " "contenido contenido " " footer footer ";
-  gap: 10px; }
-
-.menu-media {
-  grid-area: menu; }
-
-.contenido-media {
-  grid-area: contenido; }
-  .contenido-media .titulo-media {
-    font-size: 17px;
-    margin-bottom: 15px;
-    margin-left: 15px; }
-  .contenido-media .container-media {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    gap: 5px;
-    margin: 15px; }
-    .contenido-media .container-media .foto-media {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px; }
-
-.footer-media {
-  grid-area: footer; }
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 5px;
+  margin: 15px; }
+  .container-media .foto-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; }
 
 /* ---------- CSS SERVICIOS--------*/
-.Grid-servicio {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 5% auto 4%;
-  gap: 10px;
-  grid-template-areas: " menu menu " " contenido contenido " "footer footer "; }
-
-.menu-servicios {
-  grid-area: menu; }
-
 .contenido-servicios {
-  grid-area: contenido;
   margin: 15px; }
   .contenido-servicios .container-tipo-servicio {
     display: flex;
@@ -153,9 +98,6 @@
         object-fit: cover;
         border-radius: 30px; }
 
-.footer-servicios {
-  grid-area: footer; }
-
 /* CSS GENERAL*/
 * {
   font-family: "montserrat"; }
@@ -181,6 +123,10 @@ a {
   color: white; }
   .class-a:hover {
     color: white; }
+
+.navbar-collapse {
+  display: flex;
+  flex-direction: column; }
 
 footer {
   padding: 10px;
@@ -209,67 +155,56 @@ footer {
   color: white; }
 
 /* ---------- CSS INDEX ---------*/
-.Grid-index {
+.container-titulo-index {
+  padding: 8px;
+  margin-top: 15px;
+  margin-left: 10px; }
+  .container-titulo-index .titulo-index {
+    font-size: 20px;
+    text-align: center; }
+
+.container-img-index {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 10px;
+  padding: 15px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 5% auto 4%;
-  grid-template-areas: " menu menu" " contenido contenido" " footer footer";
-  gap: 20px; }
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px; }
+  .container-img-index .img-index {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover; }
+  .container-img-index .img-puente {
+    grid-row: 4/6; }
 
-.menu-index {
-  grid-area: menu; }
+.container-carousel-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 15px; }
+  .container-carousel-index .carouselIner-index {
+    width: 350px;
+    border-radius: 40px; }
+    .container-carousel-index .carouselIner-index .img-carousel-index {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 30px; }
 
-.contenido-index {
-  grid-area: contenido; }
-  .contenido-index .container-titulo {
-    margin-left: 20px;
-    padding: 8px;
-    margin-top: 15px; }
-    .contenido-index .container-titulo .titulo-index {
-      font-size: 20px;
-      text-align: center; }
-  .contenido-index .container-img-index {
-    max-width: 100%;
-    max-height: 100%;
+.container-texto1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .container-texto1 h3 {
+    text-align: center;
+    font-size: 10px;
     margin: 10px;
-    padding: 15px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: repeat(5, 1fr);
-    gap: 10px; }
-    .contenido-index .container-img-index .img-index {
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      object-fit: cover; }
-    .contenido-index .container-img-index .img-puente {
-      grid-row: 4/6; }
-  .contenido-index .container-carousel-index {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    padding: 15px; }
-    .contenido-index .container-carousel-index .carouselIner-index {
-      width: 350px;
-      border-radius: 40px; }
-      .contenido-index .container-carousel-index .carouselIner-index .img-carousel-index {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 30px; }
-  .contenido-index .container-texto1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    .contenido-index .container-texto1 h3 {
-      width: 100%;
-      text-align: center;
-      font-size: 10px; }
-
-.footer-index {
-  grid-area: footer; }
+    padding: 10px; }
 
 /*MEDIA  QUERIES TABLET*/
 @media screen and (min-width: 600px) {
@@ -282,131 +217,68 @@ footer {
     padding: 7px;
     border-radius: 40px; }
   /*MEDIA  QUERIES INDEX*/
-  .Grid-index {
+  .container-titulo-index .titulo-index {
+    font-size: 25px; }
+  .container-img-index {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 7% auto 3%;
-    grid-template-areas: " menu menu menu" " contenido contenido contenido" " footer footer footer";
-    gap: 20px; }
-  .menu-index {
-    grid-area: menu; }
-  .contenido-index {
-    grid-area: contenido; }
-    .contenido-index .container-titulo .titulo-index {
-      font-size: 25px;
-      text-align: center;
-      margin: 10px;
-      padding: 10px; }
-    .contenido-index .container-img-index {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 5px; }
-      .contenido-index .container-img-index .img-puente {
-        grid-area: 3/3/4/4; }
-    .contenido-index .container-carousel-index .carouselIner-index {
-      width: 500px; }
-      .contenido-index .container-carousel-index .carouselIner-index .img-carousel-index {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 30px; }
-    .contenido-index .container-texto1 h3 {
-      font-size: 15px; }
-  .footer-index {
-    grid-area: footer; }
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px; }
+    .container-img-index .img-puente {
+      grid-area: 3/3/4/4; }
+  .container-carousel-index .carouselIner-index {
+    width: 500px; }
+    .container-carousel-index .carouselIner-index .img-carousel-index {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 30px; }
+  .container-texto1 h3 {
+    font-size: 15px; }
   /* contacto TABLET*/
-  .Grid-contacto {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 17% auto 8%;
-    grid-template-areas: " menu menu menu" " contenido contenido contenido" " footer footer footer";
-    gap: 20px; }
-  .menu-contacto {
-    grid-area: menu; }
-  .contenido-contacto {
-    grid-area: contenido; }
-    .contenido-contacto .container-form .titulo-form {
-      font-size: 20px; }
-    .contenido-contacto .container-form form input {
-      width: 400px;
-      height: 35px;
-      margin: 12px; }
-  .footer-contacto {
-    grid-area: footer; }
-  /* nosotros TABLET*/
-  .Grid-nosotros {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 15% auto 10%;
-    grid-template-areas: " menu menu menu" "contenido contenido contenido" " footer footer footer";
-    gap: 10px; }
-  .menu-nosotros {
-    grid-area: menu; }
-  .contenido-nosotros {
-    grid-area: contenido; }
-    .contenido-nosotros .container-nosotros .titulo-nosotros {
-      font-size: 25px; }
-    .contenido-nosotros .container-nosotros .video-nosotros {
-      width: 450px;
-      height: 300px; }
-  .footer-nosotros {
-    grid-area: footer; }
+  .container-form .titulo-form {
+    font-size: 22px; }
+  .container-form form input {
+    width: 400px;
+    height: 35px;
+    margin: 12px; }
+  /* NOSOTROS TABLET*/
+  .container-nosotros .titulo-nosotros {
+    font-size: 25px; }
+  .container-nosotros .video-nosotros {
+    width: 450px;
+    height: 300px; }
   /*MEDIA TABLET*/
-  .Grid-media {
+  .titulo-media {
+    font-size: 24px; }
+  .container-media {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 5% auto 4%;
-    grid-template-areas: " menu menu menu" "contenido contenido contenido" " footer footer footer";
-    gap: 10px; }
-  .menu-media {
-    grid-area: menu; }
-  .contenido-media {
-    grid-area: contenido; }
-    .contenido-media .titulo-media {
-      font-size: 20px; }
-    .contenido-media .container-media {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(12, 250px);
-      gap: 10px;
-      margin: 20px; }
-      .contenido-media .container-media .img-camara {
-        grid-area: 9/2/10/4; }
-      .contenido-media .container-media .img-mujer {
-        grid-column: 3/5; }
-      .contenido-media .container-media .img-pareja {
-        grid-area: 12/2/13/4; }
-  .footer-media {
-    grid-area: footer; }
-  /*servicios TABLET*/
-  .Grid-servicio {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 4% auto 7%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 250px);
     gap: 10px;
-    grid-template-areas: " menu menu menu" " contenido contenido contenido" "footer footer footer"; }
-  .menu-servicios {
-    grid-area: menu; }
-  .contenido-servicios {
-    grid-area: contenido; }
-    .contenido-servicios .container-tipo-servicio .titulo-servicio {
-      font-size: 24px; }
-    .contenido-servicios .container-tipo-servicio .texto-servicio {
-      text-align: center;
-      font-size: 14px; }
-    .contenido-servicios .container-tipo-servicio .texto-servicio-2 {
-      text-align: center;
-      font-size: 14px;
-      margin-bottom: 15px; }
-    .contenido-servicios .container-tipo-servicio .carouselIner-servicios {
+    margin: 20px; }
+    .container-media .img-camara {
+      grid-area: 9/2/10/4; }
+    .container-media .img-mujer {
+      grid-column: 3/5; }
+    .container-media .img-pareja {
+      grid-area: 12/2/13/4; }
+  /*servicios TABLET*/
+  .contenido-servicios .container-tipo-servicio .titulo-servicio {
+    font-size: 24px; }
+  .contenido-servicios .container-tipo-servicio .texto-servicio {
+    text-align: center;
+    font-size: 14px; }
+  .contenido-servicios .container-tipo-servicio .texto-servicio-2 {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px; }
+  .contenido-servicios .container-tipo-servicio .carouselIner-servicios {
+    width: 500px;
+    height: 300px; }
+    .contenido-servicios .container-tipo-servicio .carouselIner-servicios .img-servicio {
       width: 500px;
-      height: 300px; }
-      .contenido-servicios .container-tipo-servicio .carouselIner-servicios .img-servicio {
-        width: 500px;
-        height: 300px; }
-  .footer-servicios {
-    grid-area: footer; } }
+      height: 300px; } }
 
 /*MEDIA QUERIES DESKTOP*/
 @media screen and (min-width: 1024px) {
@@ -439,199 +311,132 @@ footer {
       width: 120px;
       font-size: 16px; }
   /* INDEX DESKTOP*/
-  .Grid-index {
+  .container-titulo-index .titulo-index {
+    font-size: 30px;
+    text-align: left; }
+  .container-img-index {
+    max-width: 100%;
+    margin: 15px;
+    padding: 15px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 10% auto 10%;
-    grid-template-areas: " menu menu menu" " contenido contenido contenido " " footer footer footer";
-    gap: 20px; }
-  .menu-index {
-    grid-area: menu; }
-  .contenido-index {
-    grid-area: contenido; }
-    .contenido-index .container-titulo .titulo-index {
-      font-size: 30px;
-      text-align: left;
-      margin: 10px;
-      padding: 10px; }
-    .contenido-index .container-img-index {
-      max-width: 100%;
-      margin: 15px;
-      padding: 15px;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(2, 250px);
-      gap: 10px; }
-      .contenido-index .container-img-index .img-vintage {
-        grid-area: 1/5/3/6; }
-      .contenido-index .container-img-index .img-puente {
-        grid-area: 2/4/3/5; }
-    .contenido-index .container-carousel-index .carouselIner-index {
-      width: 700px; }
-      .contenido-index .container-carousel-index .carouselIner-index .img-carousel-index {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 30px; }
-    .contenido-index .container-texto1 .segundotitulo-index {
-      color: white;
-      font-size: 24px; }
-      .contenido-index .container-texto1 .segundotitulo-index:hover {
-        background-color: white;
-        color: black;
-        border-radius: 40%;
-        width: 130px;
-        font-size: 30px; }
-    .contenido-index .container-texto1 h3 {
-      font-size: 20px; }
-  .footer-index {
-    grid-area: footer; }
-  /* CONTACTO DESKTOP*/
-  .Grid-contacto {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 15% auto 10%;
-    grid-template-areas: " menu menu menu" " contenido contenido contenido" " footer footer footer";
-    gap: 20px; }
-  .menu-contacto {
-    grid-area: menu; }
-  .contenido-contacto {
-    grid-area: contenido; }
-    .contenido-contacto .container-form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      .contenido-contacto .container-form .titulo-form {
-        font-size: 30px;
-        padding: 12px;
-        margin-bottom: 20px; }
-      .contenido-contacto .container-form form input {
-        width: 500px;
-        height: 50px;
-        margin: 16px;
-        text-align: center; }
-      .contenido-contacto .container-form form .boton-contacto {
-        margin-top: 15px;
-        width: 200px;
-        padding: 10px; }
-  .footer-contacto {
-    grid-area: footer; }
-  /* NOSOTROS DESKTOP*/
-  .Grid-nosotros {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 15% auto 10%;
-    grid-template-areas: " menu menu menu" "contenido contenido contenido" " footer footer footer";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 250px);
     gap: 10px; }
-  .menu-nosotros {
-    grid-area: menu; }
-  .contenido-nosotros {
-    grid-area: contenido; }
-    .contenido-nosotros .container-nosotros .titulo-nosotros {
+    .container-img-index .img-vintage {
+      grid-area: 1/5/3/6; }
+    .container-img-index .img-puente {
+      grid-area: 2/4/3/5; }
+  .container-carousel-index .carouselIner-index {
+    width: 700px; }
+    .container-carousel-index .carouselIner-index .img-carousel-index {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 30px; }
+  .container-texto1 .segundotitulo-index {
+    color: white;
+    font-size: 24px; }
+    .container-texto1 .segundotitulo-index:hover {
+      background-color: white;
+      color: black;
+      border-radius: 40%;
+      width: 130px;
       font-size: 30px; }
-    .contenido-nosotros .container-nosotros .texto-nosotros {
-      font-size: 20px; }
-    .contenido-nosotros .container-nosotros .video-nosotros {
-      width: 600px;
-      height: 400px;
-      margin-top: 15px; }
-  .footer-nosotros {
-    grid-area: footer; }
+  .container-texto1 h3 {
+    font-size: 20px; }
+  /* CONTACTO DESKTOP*/
+  .container-form .titulo-form {
+    font-size: 30px;
+    padding: 12px;
+    margin-bottom: 20px; }
+  .container-form form input {
+    width: 500px;
+    height: 50px;
+    margin: 16px;
+    text-align: center; }
+  .container-form form .boton-contacto {
+    margin-top: 15px;
+    width: 200px;
+    padding: 10px; }
+  /* NOSOTROS DESKTOP*/
+  .container-nosotros .titulo-nosotros {
+    font-size: 30px; }
+  .container-nosotros .texto-nosotros {
+    font-size: 20px; }
+  .container-nosotros .video-nosotros {
+    width: 600px;
+    height: 400px;
+    margin-top: 15px; }
   /*MEDIA DESKTOP*/
-  .Grid-media {
+  .titulo-media {
+    font-size: 28px; }
+  .container-media {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 5% auto 5%;
-    grid-template-areas: " menu menu menu" "contenido contenido contenido" " footer footer footer";
-    gap: 10px; }
-  .menu-media {
-    grid-area: menu; }
-  .contenido-media {
-    grid-area: contenido; }
-    .contenido-media .titulo-media {
-      font-size: 25px; }
-    .contenido-media .container-media {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(12, 250px);
-      gap: 10px;
-      margin: 45px; }
-      .contenido-media .container-media .img-nieve {
-        grid-row: 11/13; }
-      .contenido-media .container-media .img-ciudad {
-        grid-row: 11/13; }
-      .contenido-media .container-media .bici {
-        grid-column: 1/3; }
-      .contenido-media .container-media .chica {
-        grid-area: 1/5/3/6; }
-      .contenido-media .container-media .bailarina {
-        grid-area: 3/2/5/3; }
-      .contenido-media .container-media .nieve {
-        grid-area: 2/4/4/5; }
-      .contenido-media .container-media .fotomodelo {
-        grid-row: 5/7; }
-      .contenido-media .container-media .modelo3 {
-        grid-row: 8/10; }
-      .contenido-media .container-media .modelo5 {
-        grid-column: 4/6; }
-      .contenido-media .container-media .modelo6 {
-        grid-row: 10/11; }
-      .contenido-media .container-media .fotozapatillas {
-        grid-area: 6/5/8/6; }
-      .contenido-media .container-media .fotosillon {
-        grid-column: 3/5; }
-      .contenido-media .container-media .gastronomia {
-        grid-area: 6/4/8/5; }
-      .contenido-media .container-media .skate {
-        grid-area: 7/3/9/4; }
-      .contenido-media .container-media .camino {
-        grid-area: 9/2/11/3; }
-      .contenido-media .container-media .construccion {
-        grid-area: 4/5/6/6; }
-      .contenido-media .container-media .img-camara {
-        grid-area: auto; }
-      .contenido-media .container-media .img-mujer {
-        grid-column: auto; }
-      .contenido-media .container-media .img-pareja {
-        grid-area: auto; }
-  .footer-media {
-    grid-area: footer; }
-  /*SERVICIOS DESKTOP*/
-  .Grid-servicio {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 3% auto 7%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(12, 250px);
     gap: 10px;
-    grid-template-areas: " menu menu menu" " contenido contenido contenido" "footer footer footer"; }
-  .menu-servicios {
-    grid-area: menu; }
-  .contenido-servicios {
-    grid-area: contenido; }
-    .contenido-servicios .container-tipo-servicio .titulo-servicio {
-      font-size: 28px;
-      margin: 10px;
-      padding: 10px;
-      background-color: black;
-      width: auto;
-      transition: all 1s linear; }
-      .contenido-servicios .container-tipo-servicio .titulo-servicio:hover {
-        font-size: 40px; }
-    .contenido-servicios .container-tipo-servicio .texto-servicio {
-      text-align: center;
-      width: 900px;
-      font-size: 18px; }
-    .contenido-servicios .container-tipo-servicio .texto-servicio-2 {
-      text-align: center;
-      width: 900px;
-      font-size: 18px;
-      margin-bottom: 15px; }
-    .contenido-servicios .container-tipo-servicio .carouselIner-servicios {
+    margin: 45px; }
+    .container-media .img-nieve {
+      grid-row: 11/13; }
+    .container-media .img-ciudad {
+      grid-row: 11/13; }
+    .container-media .bici {
+      grid-column: 1/3; }
+    .container-media .chica {
+      grid-area: 1/5/3/6; }
+    .container-media .bailarina {
+      grid-area: 3/2/5/3; }
+    .container-media .nieve {
+      grid-area: 2/4/4/5; }
+    .container-media .fotomodelo {
+      grid-row: 5/7; }
+    .container-media .modelo3 {
+      grid-row: 8/10; }
+    .container-media .modelo5 {
+      grid-column: 4/6; }
+    .container-media .modelo6 {
+      grid-row: 10/11; }
+    .container-media .fotozapatillas {
+      grid-area: 6/5/8/6; }
+    .container-media .fotosillon {
+      grid-column: 3/5; }
+    .container-media .gastronomia {
+      grid-area: 6/4/8/5; }
+    .container-media .skate {
+      grid-area: 7/3/9/4; }
+    .container-media .camino {
+      grid-area: 9/2/11/3; }
+    .container-media .construccion {
+      grid-area: 4/5/6/6; }
+    .container-media .img-camara {
+      grid-area: auto; }
+    .container-media .img-mujer {
+      grid-column: auto; }
+    .container-media .img-pareja {
+      grid-area: auto; }
+  /*SERVICIOS DESKTOP*/
+  .contenido-servicios .container-tipo-servicio .titulo-servicio {
+    font-size: 28px;
+    margin: 10px;
+    padding: 10px;
+    background-color: black;
+    width: auto;
+    transition: all 1s linear; }
+    .contenido-servicios .container-tipo-servicio .titulo-servicio:hover {
+      font-size: 40px; }
+  .contenido-servicios .container-tipo-servicio .texto-servicio {
+    text-align: center;
+    width: 900px;
+    font-size: 18px; }
+  .contenido-servicios .container-tipo-servicio .texto-servicio-2 {
+    text-align: center;
+    width: 900px;
+    font-size: 18px;
+    margin-bottom: 15px; }
+  .contenido-servicios .container-tipo-servicio .carouselIner-servicios {
+    width: 800px;
+    height: 400px;
+    margin-bottom: 10px; }
+    .contenido-servicios .container-tipo-servicio .carouselIner-servicios .img-servicio {
       width: 800px;
-      height: 400px;
-      margin-bottom: 10px; }
-      .contenido-servicios .container-tipo-servicio .carouselIner-servicios .img-servicio {
-        width: 800px;
-        height: 400px; }
-  .footer-servicios {
-    grid-area: footer; } }
+      height: 400px; } }
