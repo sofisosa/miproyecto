@@ -12,16 +12,17 @@
         .titulo-servicio {
             text-align: center;
             text-decoration: underline;
-            font-size: 20px;
+            font-size: $titulo-mobile;
             margin-top: 10px;
+            font-weight: bold;
           }
           .texto-servicio {
             text-align: center;
-            font-size: 12px;
+            font-size: $texto-mobile;
               }
               .texto-servicio-2 {
                 text-align: center;
-                font-size: 12px;
+                font-size: $texto-mobile;
                 margin-bottom: 10px;
                 .click {
                     font-weight: bold;

@@ -1,8 +1,10 @@
 /*CSS CONTACTO*/
 .container-form {
   margin: 15px;
-  padding: 10px; }
-  .container-form .titulo-form {
+  padding: 10px;
+  /*  AGREGANDO EXTEND Y MAPS*/
+  /*maps*/ }
+  .container-form .titulo-form, .container-form h3 {
     text-align: center;
     margin: 8px;
     padding: 6px;
@@ -17,10 +19,26 @@
       height: 30px;
       margin: 12px;
       text-align: center; }
-    .container-form form .boton-contacto {
+    .container-form form .boton-contacto, .container-form form .btn-redes {
       margin-top: 15px;
-      width: 150px;
+      width: 300px;
       padding: 5px; }
+  .container-form h3 {
+    /*extend*/
+    text-decoration: underline;
+    margin-top: 30px; }
+  .container-form .container-botones {
+    display: flex;
+    justify-content: space-around; }
+  .container-form .btn-redes {
+    /*extend*/
+    border-radius: 15px; }
+  .container-form .btn-redes {
+    background-color: #4c7962; }
+  .container-form .btn-trabajos {
+    background-color: #794f4f; }
+  .container-form .btn-clientes {
+    background-color: #6259b4; }
 
 /* ---------- CSS  NOSOTROS--------*/
 .container-nosotros {
@@ -40,7 +58,7 @@
     margin-bottom: 15px;
     padding: 10px;
     text-align: center;
-    font-size: 16px; }
+    font-size: 12px; }
   .container-nosotros .video-nosotros {
     width: 350px;
     height: 200px; }
@@ -78,7 +96,8 @@
       text-align: center;
       text-decoration: underline;
       font-size: 20px;
-      margin-top: 10px; }
+      margin-top: 10px;
+      font-weight: bold; }
     .contenido-servicios .container-tipo-servicio .texto-servicio {
       text-align: center;
       font-size: 12px; }
@@ -202,11 +221,11 @@ footer {
   align-items: center; }
   .container-texto1 h3 {
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
     margin: 10px;
     padding: 10px; }
 
-/*MEDIA  QUERIES TABLET*/
+/*MEDIA QUERIES TABLET*/
 @media screen and (min-width: 600px) {
   /*MEDIA  QUERIES GENERAL*/
   .logo-principal {
@@ -218,7 +237,7 @@ footer {
     border-radius: 40px; }
   /*MEDIA  QUERIES INDEX*/
   .container-titulo-index .titulo-index {
-    font-size: 25px; }
+    font-size: 24px; }
   .container-img-index {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -234,17 +253,19 @@ footer {
       object-fit: cover;
       border-radius: 30px; }
   .container-texto1 h3 {
-    font-size: 15px; }
+    font-size: 16px; }
   /* contacto TABLET*/
-  .container-form .titulo-form {
-    font-size: 22px; }
+  .container-form .titulo-form, .container-form h3 {
+    font-size: 24px; }
   .container-form form input {
     width: 400px;
     height: 35px;
     margin: 12px; }
   /* NOSOTROS TABLET*/
   .container-nosotros .titulo-nosotros {
-    font-size: 25px; }
+    font-size: 24px; }
+  .container-nosotros .texto-nosotros {
+    font-size: 16px; }
   .container-nosotros .video-nosotros {
     width: 450px;
     height: 300px; }
@@ -268,10 +289,10 @@ footer {
     font-size: 24px; }
   .contenido-servicios .container-tipo-servicio .texto-servicio {
     text-align: center;
-    font-size: 14px; }
+    font-size: 16px; }
   .contenido-servicios .container-tipo-servicio .texto-servicio-2 {
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 15px; }
   .contenido-servicios .container-tipo-servicio .carouselIner-servicios {
     width: 500px;
@@ -281,7 +302,7 @@ footer {
       height: 300px; } }
 
 /*MEDIA QUERIES DESKTOP*/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   /*MEDIA  QUERIES GENERAL*/
   .logo-principal {
     width: 100px;
@@ -334,10 +355,11 @@ footer {
       object-fit: cover;
       border-radius: 30px; }
   .container-texto1 .segundotitulo-index {
-    color: white;
+    /* aplicando MAP-GET*/
+    color: #816797;
     font-size: 24px; }
     .container-texto1 .segundotitulo-index:hover {
-      background-color: white;
+      background-color: #816797;
       color: black;
       border-radius: 40%;
       width: 130px;
@@ -345,7 +367,7 @@ footer {
   .container-texto1 h3 {
     font-size: 20px; }
   /* CONTACTO DESKTOP*/
-  .container-form .titulo-form {
+  .container-form .titulo-form, .container-form h3 {
     font-size: 30px;
     padding: 12px;
     margin-bottom: 20px; }
@@ -354,7 +376,7 @@ footer {
     height: 50px;
     margin: 16px;
     text-align: center; }
-  .container-form form .boton-contacto {
+  .container-form form .boton-contacto, .container-form form .btn-redes {
     margin-top: 15px;
     width: 200px;
     padding: 10px; }
@@ -369,7 +391,7 @@ footer {
     margin-top: 15px; }
   /*MEDIA DESKTOP*/
   .titulo-media {
-    font-size: 28px; }
+    font-size: 30px; }
   .container-media {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -416,7 +438,7 @@ footer {
       grid-area: auto; }
   /*SERVICIOS DESKTOP*/
   .contenido-servicios .container-tipo-servicio .titulo-servicio {
-    font-size: 28px;
+    font-size: 30px;
     margin: 10px;
     padding: 10px;
     background-color: black;
@@ -427,11 +449,11 @@ footer {
   .contenido-servicios .container-tipo-servicio .texto-servicio {
     text-align: center;
     width: 900px;
-    font-size: 18px; }
+    font-size: 20px; }
   .contenido-servicios .container-tipo-servicio .texto-servicio-2 {
     text-align: center;
     width: 900px;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 15px; }
   .contenido-servicios .container-tipo-servicio .carouselIner-servicios {
     width: 800px;
@@ -439,4 +461,17 @@ footer {
     margin-bottom: 10px; }
     .contenido-servicios .container-tipo-servicio .carouselIner-servicios .img-servicio {
       width: 800px;
-      height: 400px; } }
+      height: 400px; }
+  /*AGREGANDO MAPS*/
+  .titulo-bodas {
+    color: #D3EBCD; }
+  .titulo-moda {
+    color: #816797; }
+  .titulo-deportes {
+    color: #E9A6A6; }
+  .titulo-conciertos {
+    color: #51557E; }
+  .titulo-marcas {
+    color: #950101; }
+  .titulo-gastronomia {
+    color: #B85C38; } }

@@ -1,5 +1,5 @@
+@import'variables';
  /* ---------- CSS  NOSOTROS--------*/
-
 
  .container-nosotros {
    display: flex;
@@ -11,7 +11,7 @@
 
 
    .titulo-nosotros {
-     font-size: 20px;
+     font-size: $titulo-mobile;
      text-decoration: underline;
      text-align: center;
      padding: 10px;
@@ -23,7 +23,7 @@
      margin-bottom: 15px;
      padding: 10px;
      text-align: center;
-     font-size: 16px;
+     font-size: $texto-mobile;
    }
 
    .video-nosotros {
@@ -31,3 +31,4 @@
      height: 200px;
    }
  }
+

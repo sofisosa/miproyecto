@@ -1,7 +1,9 @@
+@import'variables';
+
 /* ---------- CSS MEDIA--------*/
 
   .titulo-media {
-    font-size: 20px;
+    font-size:  $titulo-mobile;
     margin:  15px;
    padding: 10px;
 
