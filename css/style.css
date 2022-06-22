@@ -1,10 +1,8 @@
 /*CSS CONTACTO*/
 .container-form {
   margin: 15px;
-  padding: 10px;
-  /*  AGREGANDO EXTEND Y MAPS*/
-  /*maps*/ }
-  .container-form .titulo-form, .container-form h3 {
+  padding: 10px; }
+  .container-form .titulo-form {
     text-align: center;
     margin: 8px;
     padding: 6px;
@@ -19,26 +17,11 @@
       height: 30px;
       margin: 12px;
       text-align: center; }
-    .container-form form .boton-contacto, .container-form form .btn-redes {
+    .container-form form .boton-contacto {
       margin-top: 15px;
       width: 300px;
-      padding: 5px; }
-  .container-form h3 {
-    /*extend*/
-    text-decoration: underline;
-    margin-top: 30px; }
-  .container-form .container-botones {
-    display: flex;
-    justify-content: space-around; }
-  .container-form .btn-redes {
-    /*extend*/
-    border-radius: 15px; }
-  .container-form .btn-redes {
-    background-color: #4c7962; }
-  .container-form .btn-trabajos {
-    background-color: #794f4f; }
-  .container-form .btn-clientes {
-    background-color: #6259b4; }
+      padding: 5px;
+      background-color: #816797; }
 
 /* ---------- CSS  NOSOTROS--------*/
 .container-nosotros {
@@ -53,15 +36,27 @@
     text-decoration: underline;
     text-align: center;
     padding: 10px; }
-  .container-nosotros .texto-nosotros {
+  .container-nosotros .contenedor-nosotros .quienes-somos .texto-nosotros {
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 10px;
     text-align: center;
     font-size: 12px; }
-  .container-nosotros .video-nosotros {
-    width: 350px;
-    height: 200px; }
+  .container-nosotros .contenedor-nosotros .quienes-somos h2 {
+    font-size: 18px;
+    text-align: center;
+    margin: 10px; }
+  .container-nosotros .contenedor-nosotros .container-img-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .container-nosotros .contenedor-nosotros .container-img-nosotros .img-nosotros {
+      width: 350px;
+      height: 150px;
+      border-radius: 20px;
+      object-fit: cover;
+      margin: 10px; }
 
 /* ---------- CSS MEDIA--------*/
 .titulo-media {
@@ -162,17 +157,6 @@ footer {
     margin-right: 10px;
     border-radius: 30px; }
 
-.boton-volver {
-  border-radius: 50%;
-  width: 70px;
-  background-color: black;
-  font-size: 10px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  font-weight: bold;
-  color: white; }
-
 /* ---------- CSS INDEX ---------*/
 .container-titulo-index {
   padding: 8px;
@@ -254,8 +238,8 @@ footer {
       border-radius: 30px; }
   .container-texto1 h3 {
     font-size: 16px; }
-  /* contacto TABLET*/
-  .container-form .titulo-form, .container-form h3 {
+  /* CONTACTO TABLET*/
+  .container-form .titulo-form {
     font-size: 24px; }
   .container-form form input {
     width: 400px;
@@ -264,11 +248,24 @@ footer {
   /* NOSOTROS TABLET*/
   .container-nosotros .titulo-nosotros {
     font-size: 24px; }
-  .container-nosotros .texto-nosotros {
-    font-size: 16px; }
-  .container-nosotros .video-nosotros {
-    width: 450px;
-    height: 300px; }
+  .container-nosotros .contenedor-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; }
+    .container-nosotros .contenedor-nosotros .quienes-somos .texto-nosotros {
+      font-size: 16px; }
+    .container-nosotros .contenedor-nosotros .quienes-somos h2 {
+      font-size: 22px;
+      text-align: center; }
+    .container-nosotros .contenedor-nosotros .container-img-nosotros {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; }
+      .container-nosotros .contenedor-nosotros .container-img-nosotros .img-nosotros {
+        width: 200px;
+        height: 200px;
+        margin: 10px; }
   /*MEDIA TABLET*/
   .titulo-media {
     font-size: 24px; }
@@ -284,7 +281,7 @@ footer {
       grid-column: 3/5; }
     .container-media .img-pareja {
       grid-area: 12/2/13/4; }
-  /*servicios TABLET*/
+  /*SERVICIOS TABLET*/
   .contenido-servicios .container-tipo-servicio .titulo-servicio {
     font-size: 24px; }
   .contenido-servicios .container-tipo-servicio .texto-servicio {
@@ -321,14 +318,16 @@ footer {
   .boton-volver {
     border-radius: 50%;
     width: 90px;
-    background-color: black;
+    background-color: #816797;
     font-size: 13px;
     position: fixed;
     bottom: 10px;
     right: 10px;
     font-weight: bold;
-    color: white; }
+    color: white;
+    transition: 1s; }
     .boton-volver:hover {
+      background-color: #816797;
       width: 120px;
       font-size: 16px; }
   /* INDEX DESKTOP*/
@@ -357,9 +356,11 @@ footer {
   .container-texto1 .segundotitulo-index {
     /* aplicando MAP-GET*/
     color: #816797;
-    font-size: 24px; }
+    font-size: 24px;
+    transition: 1s; }
     .container-texto1 .segundotitulo-index:hover {
       background-color: #816797;
+      text-align: center;
       color: black;
       border-radius: 40%;
       width: 130px;
@@ -367,7 +368,7 @@ footer {
   .container-texto1 h3 {
     font-size: 20px; }
   /* CONTACTO DESKTOP*/
-  .container-form .titulo-form, .container-form h3 {
+  .container-form .titulo-form {
     font-size: 30px;
     padding: 12px;
     margin-bottom: 20px; }
@@ -376,19 +377,36 @@ footer {
     height: 50px;
     margin: 16px;
     text-align: center; }
-  .container-form form .boton-contacto, .container-form form .btn-redes {
+  .container-form form .boton-contacto {
     margin-top: 15px;
     width: 200px;
     padding: 10px; }
   /* NOSOTROS DESKTOP*/
   .container-nosotros .titulo-nosotros {
     font-size: 30px; }
-  .container-nosotros .texto-nosotros {
-    font-size: 20px; }
-  .container-nosotros .video-nosotros {
-    width: 600px;
-    height: 400px;
-    margin-top: 15px; }
+  .container-nosotros .contenedor-nosotros {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 100%; }
+    .container-nosotros .contenedor-nosotros .quienes-somos {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .container-nosotros .contenedor-nosotros .quienes-somos .texto-nosotros {
+        font-size: 20px;
+        width: 850px;
+        margin-left: 20px; }
+      .container-nosotros .contenedor-nosotros .quienes-somos h2 {
+        font-size: 30px; }
+    .container-nosotros .contenedor-nosotros .container-img-nosotros {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .container-nosotros .contenedor-nosotros .container-img-nosotros .img-nosotros {
+        width: 400px;
+        height: 200px; }
   /*MEDIA DESKTOP*/
   .titulo-media {
     font-size: 30px; }
@@ -461,17 +479,4 @@ footer {
     margin-bottom: 10px; }
     .contenido-servicios .container-tipo-servicio .carouselIner-servicios .img-servicio {
       width: 800px;
-      height: 400px; }
-  /*AGREGANDO MAPS*/
-  .titulo-bodas {
-    color: #D3EBCD; }
-  .titulo-moda {
-    color: #816797; }
-  .titulo-deportes {
-    color: #E9A6A6; }
-  .titulo-conciertos {
-    color: #51557E; }
-  .titulo-marcas {
-    color: #950101; }
-  .titulo-gastronomia {
-    color: #B85C38; } }
+      height: 400px; } }

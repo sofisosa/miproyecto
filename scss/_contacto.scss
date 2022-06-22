@@ -29,32 +29,9 @@
             margin-top: 15px;
             width: 300px;
             padding: 5px;
-
+            background-color: map-get($colores-varios, moda);
         }
-    }
-/*  AGREGANDO EXTEND Y MAPS*/
-    h3 {
-         /*extend*/
-        @extend .titulo-form;
-        text-decoration: underline;
-        margin-top: 30px;
+
     }
 
-    .container-botones {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .btn-redes {
-        /*extend*/
-        @extend .boton-contacto;
-     border-radius: 15px;
-    }
- /*maps*/
-     @each $boton, $valor in $colores-botones{
-
-        .btn-#{$boton}{
-            background-color: $valor;
-        }
-            }
 }

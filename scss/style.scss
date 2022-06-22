@@ -63,17 +63,7 @@ footer {
     }
 }
 
-.boton-volver {
-    border-radius: 50%;
-    width: 70px;
-    background-color: black;
-    font-size: 10px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    font-weight: bold;
-    color: white;
-}
+
 
 /* ---------- CSS INDEX ---------*/
 .container-titulo-index {
@@ -197,7 +187,7 @@ footer {
 
 
 
-    /* contacto TABLET*/
+    /* CONTACTO TABLET*/
 
     .container-form {
         .titulo-form {
@@ -217,19 +207,43 @@ footer {
 
     /* NOSOTROS TABLET*/
 
-
     .container-nosotros {
         .titulo-nosotros {
-            font-size: $titulo-tablet;
+            font-size: $titulo-tablet
         }
-.texto-nosotros{
-    font-size: $texto-tablet;
-}
-        .video-nosotros {
-            width: 450px;
-            height: 300px;
+
+        .contenedor-nosotros {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            .quienes-somos {
+                .texto-nosotros {
+                    font-size: $texto-tablet;
+                }
+
+                h2 {
+                    font-size: 22px;
+                    text-align: center;
+                }
+            }
+
+            .container-img-nosotros {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                .img-nosotros {
+                    width: 200px;
+                    height: 200px;
+                    margin: 10px;
+                }
+            }
         }
+
     }
+
 
 
     /*MEDIA TABLET*/
@@ -259,7 +273,7 @@ footer {
         }
     }
 
-    /*servicios TABLET*/
+    /*SERVICIOS TABLET*/
 
     .contenido-servicios {
         .container-tipo-servicio {
@@ -324,15 +338,17 @@ footer {
     .boton-volver {
         border-radius: 50%;
         width: 90px;
-        background-color: black;
+        background-color: map-get($colores-varios, moda);
         font-size: 13px;
         position: fixed;
         bottom: 10px;
         right: 10px;
         font-weight: bold;
         color: white;
+        transition: 1s;
 
         &:hover {
+            background-color: map-get($colores-varios, moda);
             width: 120px;
             font-size: 16px;
         }
@@ -382,11 +398,13 @@ footer {
     .container-texto1 {
         .segundotitulo-index {
             /* aplicando MAP-GET*/
-            color: map-get($colores-servicios,moda);
+            color: map-get($colores-varios, moda);
             font-size: 24px;
+            transition: 1s;
 
             &:hover {
-                background-color:map-get($colores-servicios,moda);
+                background-color: map-get($colores-varios, moda);
+                text-align: center;
                 color: black;
                 border-radius: 40%;
                 width: 130px;
@@ -431,25 +449,49 @@ footer {
 
     /* NOSOTROS DESKTOP*/
 
-
     .container-nosotros {
-
         .titulo-nosotros {
             font-size: $titulo-desktop
         }
 
+        .contenedor-nosotros {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
 
-        .texto-nosotros {
-            font-size: $texto-desktop;
-        }
+            .quienes-somos {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
-        .video-nosotros {
-            width: 600px;
-            height: 400px;
-            margin-top: 15px;
+                .texto-nosotros {
+                    font-size: $texto-desktop;
+                    width: 850px;
+                    margin-left: 20px;
+                }
+
+                h2 {
+                    font-size: $titulo-desktop;
+
+                }
+            }
+
+            .container-img-nosotros {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .img-nosotros {
+                    width: 400px;
+                    height: 200px;
+                }
+            }
         }
 
     }
+
     /*MEDIA DESKTOP*/
 
     .titulo-media {
@@ -553,7 +595,7 @@ footer {
                 background-color: black;
                 width: auto;
                 transition: all 1s linear;
-                
+
 
                 &:hover {
                     font-size: 40px;
@@ -587,13 +629,5 @@ footer {
 
         }
     }
-    /*AGREGANDO MAPS*/
-    
-    @each $servicio, $valor in $colores-servicios{
 
-.titulo-#{$servicio}{
-    color: $valor;
-}
-    }
-  
 }
